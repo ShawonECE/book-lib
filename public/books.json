@@ -8,7 +8,7 @@
       "totalPages": 180,
       "rating": 4.5,
       "category": "Classic",
-      "tags": ["Fiction", "Romance", "Drama"],
+      "tags": ["Fiction", "Romance"],
       "publisher": "Scribner",
       "yearOfPublishing": 1925
     },
@@ -21,7 +21,7 @@
       "totalPages": 328,
       "rating": 4.8,
       "category": "Dystopian",
-      "tags": ["Science Fiction", "Politics", "Philosophy"],
+      "tags": ["Science Fiction", "Politics"],
       "publisher": "Secker & Warburg",
       "yearOfPublishing": 1949
     },
@@ -34,7 +34,7 @@
       "totalPages": 281,
       "rating": 4.7,
       "category": "Classic",
-      "tags": ["Fiction", "Legal Drama", "Coming-of-Age"],
+      "tags": ["Fiction", "Legal Drama"],
       "publisher": "J. B. Lippincott & Co.",
       "yearOfPublishing": 1960
     },
@@ -47,7 +47,7 @@
       "totalPages": 224,
       "rating": 4.4,
       "category": "Classic",
-      "tags": ["Fiction", "Coming-of-Age", "Literary Fiction"],
+      "tags": ["Fiction", "Coming-of-Age"],
       "publisher": "Little, Brown and Company",
       "yearOfPublishing": 1951
     },
@@ -60,7 +60,7 @@
       "totalPages": 279,
       "rating": 4.6,
       "category": "Classic",
-      "tags": ["Romance", "Satire", "Regency Era"],
+      "tags": ["Romance", "Satire"],
       "publisher": "T. Egerton, Whitehall",
       "yearOfPublishing": 1813
     },
@@ -73,7 +73,7 @@
       "totalPages": 624,
       "rating": 4.3,
       "category": "Classic",
-      "tags": ["Adventure", "Sea Story", "Symbolism"],
+      "tags": ["Adventure", "Sea Story"],
       "publisher": "Richard Bentley (UK), Harper & Brothers (US)",
       "yearOfPublishing": 1851
     },
@@ -86,7 +86,7 @@
         "totalPages": 1178,
         "rating": 4.9,
         "category": "Fantasy",
-        "tags": ["Adventure", "Quest", "High Fantasy"],
+        "tags": ["Adventure", "Quest"],
         "publisher": "George Allen & Unwin",
         "yearOfPublishing": 1954
       },
@@ -99,7 +99,7 @@
         "totalPages": 309,
         "rating": 4.7,
         "category": "Fantasy",
-        "tags": ["Magic", "Friendship", "Young Adult"],
+        "tags": ["Magic", "Friendship"],
         "publisher": "Bloomsbury",
         "yearOfPublishing": 1997
       },
@@ -112,7 +112,7 @@
         "totalPages": 310,
         "rating": 4.6,
         "category": "Fantasy",
-        "tags": ["Adventure", "Quest", "Children's Literature"],
+        "tags": ["Adventure", "Quest"],
         "publisher": "George Allen & Unwin",
         "yearOfPublishing": 1937
       }
