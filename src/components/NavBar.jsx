@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -9,10 +9,49 @@ const NavBar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        
+                    <li className="text-base"><NavLink style={({ isActive }) => {
+                        return {
+                            color: isActive ? "#23BE0A" : "",
+                            backgroundColor: isActive ? "#00000000" : "",
+                            borderRadius: '8px',
+                            border: isActive ? '1px solid #23BE0A' : ""
+                        };
+                    }} to="/">Home</NavLink></li>
+                    <li className="text-base"><NavLink style={({ isActive }) => {
+                        return {
+                            color: isActive ? "#23BE0A" : "",
+                            backgroundColor: isActive ? "#00000000" : "",
+                            borderRadius: '8px',
+                            border: isActive ? '1px solid #23BE0A' : ""
+                        };
+                    }} to="/listed-books">Listed Books</NavLink></li>
+                    <li className="text-base"><NavLink style={({ isActive }) => {
+                        return {
+                            color: isActive ? "#23BE0A" : "",
+                            backgroundColor: isActive ? "#00000000" : "",
+                            borderRadius: '8px',
+                            border: isActive ? '1px solid #23BE0A' : ""
+                        };
+                    }} to="/pages-to-read">Pages to Read</NavLink></li>
+                    <li className="text-base"><NavLink style={({ isActive }) => {
+                        return {
+                            color: isActive ? "#23BE0A" : "",
+                            backgroundColor: isActive ? "#00000000" : "",
+                            borderRadius: '8px',
+                            border: isActive ? '1px solid #23BE0A' : ""
+                        };
+                    }} to="/discover">Discover</NavLink></li>
+                    <li className="text-base"><NavLink style={({ isActive }) => {
+                        return {
+                            color: isActive ? "#23BE0A" : "",
+                            backgroundColor: isActive ? "#00000000" : "",
+                            borderRadius: '8px',
+                            border: isActive ? '1px solid #23BE0A' : ""
+                        };
+                    }} to="/top-picks">Top Picks</NavLink></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-2xl font-bold work-sans-font">BookLib</a>
+                <a className="btn btn-ghost text-xl lg:text-2xl font-bold work-sans-font">BookLib</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-2">
