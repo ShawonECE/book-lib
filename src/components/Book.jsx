@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 const Book = ({book}) => {
-    const {image, tags, bookName, author, category, rating} = book;
+    const {image, tags, bookName, author, category, rating, bookId} = book;
+    const navigate = useNavigate();
+    const showDetail = () => {
+        navigate(`/book-detail/${bookId}`);
+    };
     return (
-        <div className="card bg-base-100 border">
+        <div onClick={showDetail} className="card bg-base-100 border cursor-pointer">
             <figure className="px-10 pt-10">
                 <img src={image} alt="Shoes" className="rounded-xl h-52" />
             </figure>

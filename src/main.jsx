@@ -11,15 +11,18 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css';
+import BookDetail from './components/BookDetail.jsx';
+import ErrorPage from './components/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
-        loader: () => fetch('books.json'),
+        loader: () => fetch('https://shawonece.github.io/fake-data/books.json'),
         element: <Home />,
       },
       {
@@ -37,6 +40,11 @@ const router = createBrowserRouter([
       {
         path: "/top-picks",
         element: <TopPicks />,
+      },
+      {
+        path: "/book-detail/:id",
+        loader: () => fetch('https://shawonece.github.io/fake-data/books.json'),
+        element: <BookDetail />,
       },
     ],
   },

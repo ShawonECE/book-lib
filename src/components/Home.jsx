@@ -5,7 +5,7 @@ import Books from "./Books";
 const Home = () => {
     const books = useLoaderData();
     return (
-        <div>
+        <div className="mb-32">
             <Banner></Banner>
             <Books books={books}></Books>
         </div>
