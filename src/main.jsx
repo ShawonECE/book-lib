@@ -42,6 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/top-picks",
+        loader: () => fetch('https://shawonece.github.io/fake-data/books.json'),
         element: <TopPicks />,
       },
       {

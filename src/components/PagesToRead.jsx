@@ -16,7 +16,6 @@ const PagesToRead = () => {
             pages: book.totalPages
         }
     });
-    console.log(pageData);
 
     return (
         <div className="flex justify-center mt-5 lg:mt-8 mb-32 bg-gray-200 rounded-xl py-10 lg:py-20">
