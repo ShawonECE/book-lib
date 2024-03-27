@@ -32,10 +32,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/pages-to-read",
+        loader: () => fetch('https://shawonece.github.io/fake-data/books.json'),
         element: <PagesToRead />,
       },
       {
         path: "/discover",
+        loader: () => fetch('https://shawonece.github.io/fake-data/books.json'),
         element: <Discover />,
       },
       {
