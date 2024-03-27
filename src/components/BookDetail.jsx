@@ -5,6 +5,9 @@ import { useContext, useState } from "react";
 import Toast from "./Toast.jsx";
 
 const BookDetail = () => {
+    const saveToLocalStorage = (key, list) => {
+        localStorage.setItem(key, JSON.stringify(list));
+    };
     const [read, setRead] = useContext(ReadContext);
     const [wish, setWish] = useContext(WishContext);
     const [showAddedRead, setShowAddedRead] = useState(false);
@@ -27,6 +30,7 @@ const BookDetail = () => {
             const readList = [...read];
             readList.push(intId);
             setRead(readList);
+            saveToLocalStorage("read", readList);
             showToast(setShowAddedRead);
         }
     };
@@ -39,6 +43,7 @@ const BookDetail = () => {
             const wishList = [...wish];
             wishList.push(intId);
             setWish(wishList);
+            saveToLocalStorage("wishlist", wishList);
             showToast(setShowAddedWish);
         }
     };
