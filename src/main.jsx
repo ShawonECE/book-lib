@@ -27,6 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/listed-books",
+        loader: () => fetch('https://shawonece.github.io/fake-data/books.json'),
         element: <ListedBooks />,
       },
       {
