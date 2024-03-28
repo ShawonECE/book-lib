@@ -1,8 +1,10 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ReadContext } from "../Root";
 import { WishContext } from "../Root";
-import { useContext, useState } from "react";
-import Toast from "./Toast.jsx";
+import { useContext } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const BookDetail = () => {
     const saveToLocalStorage = (key, list) => {
@@ -10,41 +12,31 @@ const BookDetail = () => {
     };
     const [read, setRead] = useContext(ReadContext);
     const [wish, setWish] = useContext(WishContext);
-    const [showAddedRead, setShowAddedRead] = useState(false);
-    const [showAddedWish, setShowAddedWish] = useState(false);
-    const [showAlreadyRead, setShowAlreadyRead] = useState(false);
-    const [showAlreadyWish, setShowAlreadyWish] = useState(false);
-    const showToast = (show) => {
-        show(true);
-        setTimeout(() => {
-            show(false);
-        }, 3000);
-    };
     const books = useLoaderData();
     const {id} = useParams();
     const intId = parseInt(id);
     const addToRead = () => {
         if (read.includes(intId)) {
-            showToast(setShowAlreadyRead);
+            toast("Already read");
         } else {
             const readList = [...read];
             readList.push(intId);
             setRead(readList);
             saveToLocalStorage("read", readList);
-            showToast(setShowAddedRead);
+            toast("Added to read");
         }
     };
     const addToWish = () => {
         if (wish.includes(intId)) {
-            showToast(setShowAlreadyWish);
+            toast("Already in wish list");
         } else if (read.includes(intId)) {
-            showToast(setShowAlreadyRead);
+            toast("Already in read");
         } else {
             const wishList = [...wish];
             wishList.push(intId);
             setWish(wishList);
             saveToLocalStorage("wishlist", wishList);
-            showToast(setShowAddedWish);
+            toast("Added to wish list");
         }
     };
     const book = books.find(book => book.bookId === intId);
@@ -94,23 +86,8 @@ const BookDetail = () => {
                     <button onClick={addToRead} className="btn btn-outline work-sans-font text-lg">Read</button>
                     <button onClick={addToWish} className="btn bg-[#50B1C9] work-sans-font text-lg text-white">Wishlist</button>
                 </div>
-                {
-                    showAddedRead && 
-                    <Toast text="Added to read"></Toast>
-                }
-                {
-                    showAddedWish && 
-                    <Toast text="Added to wishlist"></Toast>
-                }
-                {
-                    showAlreadyRead && 
-                    <Toast text="Already read"></Toast>
-                }
-                {
-                    showAlreadyWish && 
-                    <Toast text="Already in wishlist"></Toast>
-                }
             </div>
+            <ToastContainer autoClose={2500}/>
         </div>
     );
 };
