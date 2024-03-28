@@ -18,8 +18,8 @@ const PagesToRead = () => {
     });
 
     return (
-        <div className="flex justify-center mt-5 lg:mt-8 mb-32 bg-gray-200 rounded-xl py-10 lg:py-20">
-            <ResponsiveContainer width={900} height={500}>
+        <div className="h-96 lg:h-screen mt-5 lg:mt-8 mb-32 bg-gray-200 rounded-xl py-10 lg:py-20">
+            <ResponsiveContainer width="100%" height="100%">
             <BarChart
                 data={pageData}
                 margin={{
